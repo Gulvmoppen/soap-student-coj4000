@@ -17,6 +17,20 @@ namespace WcfStudentService
         string GetData(int value);
 
         [OperationContract]
+        void AddStudent(string name);
+
+        [OperationContract]
+        string FindStudent(string name);
+
+        [OperationContract]
+        void RemoveStudent(string name);
+
+        [OperationContract]
+        void EditStudent(string name, string newname);
+
+        [OperationContract]
+        List<string> GetAllStudents();
+        [OperationContract]
         CompositeType GetDataUsingDataContract(CompositeType composite);
 
         // TODO: Add your service operations here
