@@ -14,15 +14,17 @@ namespace WcfStudentService.Tests
         [TestMethod()]
         public void AddStudentTestSuccess()
         {
-           Service1 service = new Service1();
-            //Assert
+            //Arrange
+            Service1 service = new Service1();
+            //Act
             service.AddStudent("Bob");
         }
-       
         [TestMethod()]
         public void EditStudentTestSucces()
         {
+            //Arrange
             Service1 service = new Service1();
+            //Act
             service.AddStudent("123");
             service.EditStudent("123", "Bob");
         }
@@ -30,7 +32,9 @@ namespace WcfStudentService.Tests
         [TestMethod()]
         public void FindStudentTestSucces()
         {
+            //Arrange
             Service1 service = new Service1();
+            //Act
             service.AddStudent("Bob");
             service.FindStudent("Bob");
         }
@@ -38,7 +42,9 @@ namespace WcfStudentService.Tests
         [TestMethod()]
         public void GetAllStudentsTestSucces()
         {
+            //Arrange
             Service1 service = new Service1();
+            //Act
             service.AddStudent("Bob");
             service.AddStudent("Joe");
             service.GetAllStudents();
@@ -48,7 +54,9 @@ namespace WcfStudentService.Tests
         [TestMethod()]
         public void RemoveStudentTestSucces()
         {
+            //Arrange
             Service1 service = new Service1();
+            //Act
             service.AddStudent("Joe");
             service.RemoveStudent("Joe");
         }
