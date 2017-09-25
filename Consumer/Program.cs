@@ -29,19 +29,22 @@ namespace Consumer
                     string b = "";
                     for (int i = 0; i < 2; i++)
                     {
-                        Console.WriteLine("Skriv navn");
+                        
                         if (a != "")
                         {
+                            Console.WriteLine("Skriv nyt navn");
                             b = Console.ReadLine();
                         }
                         if (a == "")
                         {
+                            Console.WriteLine("Skriv navn");
                             a = Console.ReadLine();
                         }
                      
                     }
                     service.EditStudent(a, b);
                 }
+                
                 if (myline.ToLower().Equals("remove"))
                 {
                     
