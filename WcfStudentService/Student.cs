@@ -11,14 +11,16 @@ namespace WcfStudentService
     {
         [DataMember]
         public string Name { get; set; }
-       
+
+        public int  ID { get; set; }
 
         public Student()
         {
             
         }
-        public Student(string name)
+        public Student(int id, string name)
         {
+            ID = id;
             Name = name;
            
         }

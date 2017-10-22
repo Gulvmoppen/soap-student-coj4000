@@ -14,9 +14,9 @@ namespace WcfStudentService
     public class Service1 : IService1
     {
         private readonly List<Student> studentlist = new List<Student>();
-        public void AddStudent(string name)
+        public void AddStudent(int id, string name)
         {
-            Student student = new Student(name);
+            Student student = new Student(id, name);
             studentlist.Add(student);
 
         }
@@ -32,12 +32,12 @@ namespace WcfStudentService
             }
         }
 
-        public string FindStudent(string name)
+        public string FindStudent(int id)
         {
             string student = "";
             foreach (Student s in studentlist)
             {
-                if (s.Name == name)
+                if (s.ID == id)
                 {
                     student = s.Name;
                 }

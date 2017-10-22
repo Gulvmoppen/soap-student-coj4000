@@ -20,8 +20,23 @@ namespace Consumer
                 myline = Console.ReadLine().Trim() ?? "";
                 if (myline.ToLower().Equals("opret"))
                 {
-                    Console.WriteLine("Skriv navn");
-                    service.AddStudent(Console.ReadLine());
+                    Console.WriteLine("Skriv id og navn");
+                    int a = 0;
+                    string b = "";
+                    for (int i = 0; i < 2; i++)
+                    {
+                        if (a == 0)
+                        {
+                            Console.WriteLine("Skriv ID");
+                            a = int.Parse(Console.ReadLine());
+                        }
+                        if (a != 0 && b == "")
+                        {
+                            Console.WriteLine("Skriv navn");
+                            b = Console.ReadLine();
+                        }
+                    }
+                    service.AddStudent(a, b);
                 }
                 if (myline.ToLower().Equals("edit"))
                 {
@@ -54,7 +69,7 @@ namespace Consumer
                 if (myline.ToLower().Equals("find"))
                 {
                     Console.WriteLine("Skriv navn på student du vil have vist:");
-                    Console.WriteLine(service.FindStudent(Console.ReadLine()).ToString());
+                    Console.WriteLine(service.FindStudent(int.Parse(Console.ReadLine())).ToString());
                     
                 }
                 if (myline.ToLower().Equals("getall"))

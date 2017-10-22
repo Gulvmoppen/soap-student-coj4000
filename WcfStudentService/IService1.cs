@@ -17,10 +17,10 @@ namespace WcfStudentService
         string GetData(int value);
 
         [OperationContract]
-        void AddStudent(string name);
+        void AddStudent(int id, string name);
 
         [OperationContract]
-        string FindStudent(string name);
+        string FindStudent(int id);
 
         [OperationContract]
         void RemoveStudent(string name);

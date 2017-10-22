@@ -17,7 +17,7 @@ namespace WcfStudentService.Tests
             //Arrange
             Service1 service = new Service1();
             //Act
-            service.AddStudent("Bob");
+            service.AddStudent(1, "Bob");
         }
         [TestMethod()]
         public void EditStudentTestSucces()
